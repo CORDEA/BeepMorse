@@ -1,4 +1,4 @@
-﻿namespace BeepMorse
+﻿namespace Morse
 {
     public class Class1
     {
