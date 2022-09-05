@@ -40,15 +40,26 @@
             new[] {1, 1, 1, 0, 0},
             new[] {1, 1, 1, 1, 0},
             new[] {1, 1, 1, 1, 1},
+            new[] {0, 1, 0, 1, 0, 1},
+            new[] {1, 1, 0, 0, 1, 1},
+            new[] {1, 1, 1, 0, 0, 0},
+            new[] {0, 0, 1, 1, 0, 0},
+            new[] {0, 1, 1, 1, 1, 0},
+            new[] {1, 0, 0, 0, 0, 1},
+            new[] {1, 0, 0, 1, 0},
+            new[] {1, 0, 1, 1, 0},
+            new[] {1, 0, 1, 1, 0, 1},
+            new[] {0, 1, 0, 0, 1, 0},
+            new[] {1, 0, 0, 0, 1},
         };
 
-        private const string Code = "abcdefghijklmnopqrstuvwxyz1234567890";
+        private const string Code = "abcdefghijklmnopqrstuvwxyz1234567890.,:?'-/()\"=";
 
         private readonly string[] _query;
 
         public Morse(string query)
         {
-            _query = query.Split();
+            _query = query.ToLower().Split();
         }
 
         public IEnumerable<int> Generate()
