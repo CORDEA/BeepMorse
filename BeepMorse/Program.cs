@@ -1,9 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-const int frequency = 800;
+﻿const int frequency = 800;
 const int duration = 100;
 
-const string query = "hello world";
+if (args.Length < 1)
+{
+    throw new ArgumentException("A query is required.");
+}
+
+var query = args.First();
 var morse = new Morse.Morse(query).Generate();
 
 foreach (var m in morse)
